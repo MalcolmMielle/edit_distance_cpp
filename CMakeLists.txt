@@ -28,10 +28,19 @@ add_executable(test_normalized Test/test_normalized.cpp)
 target_link_libraries(test_normalized -lboost_unit_test_framework)
 
 
+## Installing the files
 
 FILE(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/include/*.hpp")
 INSTALL(FILES ${files} DESTINATION include/editDistance)
+INSTALL(FILES editdistance-config.cmake DESTINATION lib/editdistance)
 
+
+## If rpm wanted
+
+SET(CPACK_GENERATOR "RPM")
+SET(CPACK_DEBIAN_PACKAGE_MAINTAINER "Malcolm Mielle") #required
+ 
+INCLUDE(CPack)
 
 # get_cmake_property(_variableNames VARIABLES)
 # foreach (_variableName ${_variableNames})
