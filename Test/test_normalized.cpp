@@ -19,7 +19,7 @@ BOOST_AUTO_TEST_CASE(trying)
 	dist = AASS::editdistance::normalizedEditDistance("", "", out);
 	BOOST_CHECK_EQUAL(dist, 0);
 	
-	std::string str_n("a");
+	std::string str_n("");
 	std::string str_n2("b");
 	dist = AASS::editdistance::normalizedEditDistance(str_n, str_n2, out);
 	BOOST_CHECK_EQUAL(dist, 1);
@@ -40,5 +40,17 @@ BOOST_AUTO_TEST_CASE(trying)
 	std::string str_n8("abb");
 	dist = AASS::editdistance::normalizedEditDistance(str_n7, str_n8, out);
  	bob = ((double) 2/ (double) 6);
+	BOOST_CHECK_EQUAL(dist, bob);
+	
+	std::string str_n9("je");
+	std::string str_n10("jj");
+	dist = AASS::editdistance::normalizedEditDistance(str_n9, str_n10, out);
+ 	bob = 1;
+	BOOST_CHECK_EQUAL(dist, bob);
+	
+	std::string str_n11("je");
+	std::string str_n12("ej");
+	dist = AASS::editdistance::normalizedEditDistance(str_n11, str_n12, out);
+ 	bob = 1;
 	BOOST_CHECK_EQUAL(dist, bob);
 }
