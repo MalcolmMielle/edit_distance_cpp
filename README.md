@@ -10,7 +10,7 @@ make -j8
 make install
 ```
 
-#Use in Cmake 
+# Use in Cmake 
 
 ```
 find_package( editdistance REQUIRED )
