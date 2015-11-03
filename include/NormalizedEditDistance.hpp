@@ -39,6 +39,10 @@ namespace AASS{
 			std::cout << "In for " << string_to_modify << " " << unchanged << std::endl;
 			if(string_to_modify == unchanged){
 // 				std::cout << "Strings are equal" << std::endl;
+				out = "n";
+				for(int i = 1 ; i < string_to_modify.size() ; i++){
+					out = out + "n";
+				}
 				return 0;
 			}
 			else{
@@ -52,6 +56,7 @@ namespace AASS{
 				std::cout << "GLS_yy : " << GLS_YY << std::endl;
 				double GLS_XY = GLS(string_to_modify, unchanged, out);
 				std::cout << "GLS_xy : " << GLS_XY << std::endl;
+				std::cout << "out " << out << std::endl;
 				
 				double dn_gld_up = GLS_XX + GLS_YY - (2 *  GLS_XY);
 				double dn_gld_down = GLS_XX + GLS_YY - GLS_XY;

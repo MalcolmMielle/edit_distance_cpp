@@ -53,4 +53,12 @@ BOOST_AUTO_TEST_CASE(trying)
 	dist = AASS::editdistance::normalizedEditDistance(str_n11, str_n12, out);
  	bob = 1;
 	BOOST_CHECK_EQUAL(dist, bob);
+	
+	std::string str_n13("jjj");
+	std::string str_n14("jjj");
+	std::string uu;
+	dist = AASS::editdistance::normalizedEditDistance(str_n13, str_n14, uu);
+ 	bob = 0;
+	BOOST_CHECK_EQUAL(uu, "nnn");
+	BOOST_CHECK_EQUAL(dist, bob);
 }
