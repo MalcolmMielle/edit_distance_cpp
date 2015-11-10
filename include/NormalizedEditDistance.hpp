@@ -36,7 +36,7 @@ namespace AASS{
 		*/
 		inline double normalizedEditDistance(const std::string& string_to_modify, const std::string& unchanged, std::string& out){
 			
-			std::cout << "In for " << string_to_modify << " " << unchanged << std::endl;
+// 			std::cout << "In for " << string_to_modify << " " << unchanged << std::endl;
 			if(string_to_modify == unchanged){
 // 				std::cout << "Strings are equal" << std::endl;
 				out = "n";
@@ -51,12 +51,12 @@ namespace AASS{
 				std::string out_xx;
 				std::string out_yy;
 				double GLS_XX = GLS(string_to_modify, string_to_modify, out_xx);
-				std::cout << "GLS_xx : " << GLS_XX << std::endl;
+// 				std::cout << "GLS_xx : " << GLS_XX << std::endl;
 				double GLS_YY =  GLS(unchanged, unchanged, out_yy);
-				std::cout << "GLS_yy : " << GLS_YY << std::endl;
+// 				std::cout << "GLS_yy : " << GLS_YY << std::endl;
 				double GLS_XY = GLS(string_to_modify, unchanged, out);
-				std::cout << "GLS_xy : " << GLS_XY << std::endl;
-				std::cout << "out " << out << std::endl;
+// 				std::cout << "GLS_xy : " << GLS_XY << std::endl;
+// 				std::cout << "out " << out << std::endl;
 				
 				double dn_gld_up = GLS_XX + GLS_YY - (2 *  GLS_XY);
 				double dn_gld_down = GLS_XX + GLS_YY - GLS_XY;
