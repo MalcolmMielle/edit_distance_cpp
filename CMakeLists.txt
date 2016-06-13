@@ -1,10 +1,8 @@
 #for debug : cmake -DCMAKE_BUILD_TYPE=Debug /path/to/source
-
-
-
 cmake_minimum_required(VERSION 2.6)
 project(editdistance)
 
+add_definitions(-std=c++11)
 
 # uninstall target
 configure_file(
