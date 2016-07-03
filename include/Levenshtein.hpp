@@ -26,6 +26,8 @@ namespace AASS{
 		inline unsigned int levenshteinDistance(const std::string& string_to_modify, const std::string& unchanged, std::string& out) 
 		{
 			
+			std::cout << __cplusplus << std::endl;
+			
 			out.clear();
 			
 		// 	std::cout << "COMPARING " << string_to_modify << " and " << unchanged << std::endl;
@@ -164,6 +166,8 @@ namespace AASS{
 		}
 	
 	
+	
+#if __cplusplus >= 201103
 	
 		/**
 		 * @brief Compare function return bool with true if the element are considered similar and false otherwise. No measure of how similar they scored for now !
@@ -306,8 +310,11 @@ namespace AASS{
 			return prevCol[len2];
 			
 		}
+		
+#endif
 	
 	}
+	
 	
 }
 
