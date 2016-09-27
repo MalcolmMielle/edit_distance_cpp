@@ -24,10 +24,7 @@ namespace AASS{
 		*/
 
 		inline unsigned int levenshteinDistance(const std::string& string_to_modify, const std::string& unchanged, std::string& out) 
-		{
-			
-			std::cout << __cplusplus << std::endl;
-			
+		{			
 			out.clear();
 			
 		// 	std::cout << "COMPARING " << string_to_modify << " and " << unchanged << std::endl;
