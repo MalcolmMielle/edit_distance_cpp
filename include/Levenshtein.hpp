@@ -18,7 +18,7 @@ namespace AASS{
 		* 
 		* @param[in] string_to_modify : input string
 		* @param[in] unchanged : model string
-		* @param[in] out : string describing the modification necesseary to go from input string to output string
+		* @param[in] out : string describing the modification necesseary to go from input string to output string. i : insertion, s : substitution, d : deletion, n : nothing.
 		* 
 		* @return edit-distance
 		*/

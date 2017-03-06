@@ -25,6 +25,9 @@ target_link_libraries(test_levenshtein -lboost_unit_test_framework)
 add_executable(test_normalized Test/test_normalized.cpp)
 target_link_libraries(test_normalized -lboost_unit_test_framework)
 
+add_executable(test_normalizedc11 Test/test_normilazedc11.cpp)
+target_link_libraries(test_normalizedc11 -lboost_unit_test_framework)
+
 
 ## Installing the files
 
