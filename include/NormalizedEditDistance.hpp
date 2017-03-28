@@ -105,7 +105,8 @@ namespace AASS{
 				bool tmp = true;
 				
 				for( ; it != string_to_modify.end() ; ++it){
-					if(*it != *it2){
+// 					if(*it != *it2){
+					if( compareFunction(*it, *it2) == false ){
 						tmp = false;
 						break;
 					}
