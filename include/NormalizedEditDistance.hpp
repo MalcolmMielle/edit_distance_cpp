@@ -110,6 +110,7 @@ namespace AASS{
 						tmp = false;
 						break;
 					}
+					++it2;
 				}
 				if(tmp == true){
 					flag_same = true;
